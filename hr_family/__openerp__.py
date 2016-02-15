@@ -1,18 +1,13 @@
-# -*- coding: utf-8 -*-
+# -*- coding:utf-8 -*-
 #
 #
-#    OpenERP, Open Source Management Solution
-#    Copyright (c) 2014 Vauxoo - http://www.vauxoo.com/
+#    Copyright (C) 2011,2013 Michael Telahun Makonnen <mmakonnen@gmail.com>.
 #    All Rights Reserved.
-#    info Vauxoo (info@vauxoo.com)
-#
-#    Coded by: Luis Torres (luis_t@vauxoo.com)
-#
 #
 #    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
+#    it under the terms of the GNU Affero General Public License as published
+#    by the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
 #
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -23,24 +18,24 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 #
-{"name": "HR employee family",
-    "version": "1.0",
-    "depends": ["hr",
-                ],
-    "author": "Vauxoo",
-    "description": """
-This module adds functionality to set data family of employee.
-    """,
-    "website": "http://www.vauxoo.com",
-    "category": "HR",
-    "demo": [],
-    "data": [
-        'security/ir.model.access.csv',
-        "data/hr_family_type.xml",
-        "view/hr_employee_view.xml"
+
+{
+    'name': 'Employee Family Information',
+    'version': '8.0.1.2.0',
+    'category': 'Generic Modules/Human Resources',
+    'author': "Michael Telahun Makonnen <mmakonnen@gmail.com>,"
+              "Odoo Community Association (OCA)",
+    'website': 'http://www.openerp.com',
+    'license': 'AGPL-3',
+    'depends': [
+        'hr',
     ],
-    "test": [],
-    "images": [],
-    "auto_install": False,
-    "application": True,
-    "installable": True, }
+    'data': [
+        'security/ir.model.access.csv',
+        'views/hr_children.xml',
+        'views/hr_employee.xml',
+    ],
+    'test': [
+    ],
+    'installable': True,
+}
